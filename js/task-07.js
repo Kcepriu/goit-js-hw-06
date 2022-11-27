@@ -3,6 +3,12 @@ const textEl = document.querySelector('#text');
 
 inputRangeEl.addEventListener('input', onChangeRangeInput);
 
+setFontSize(textEl, inputRangeEl.value);
+
 function onChangeRangeInput(event) {
-  textEl.style.fontSize = event.currentTarget.value + 'px';
+  setFontSize(textEl, event.currentTarget.value);
+}
+
+function setFontSize(element, fonSize) {
+  element.style.fontSize = fonSize + 'px';
 }
